@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include ('../partials/header1') %>
+  <title>Login</title>
+</head>
+<style>
+  .container2 {
+    width: 100%;     
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box;  
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;  
+  }
+  
+  /* Style the submit button with a specific background color etc */
+.container3 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+.container3:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+</style>
+
+<body>
+  <br><br>
+  <div class="container">
+    <form action="/user/login" method="POST">
+      <div>
+        <label for="email"><b>Email :</b></label>
+        <% if(message) { %>
+          <span class="text-red-500 text-sm"><%= message %></span>
+        <% } %>
+        <input class="container2" id="email" name="email" type="text" required value=<%=email %>>
+      </div>
+      <br>
+      <div>
+        <label for="password"><b>Password :</b></label>
+        <% if(password) { %>
+          <span class="text-red-500 text-sm"><%= password %></span>
+        <% } %>
+        <input class="container2" id="password" name="password" type="password" required>
+      </div>
+      <br>
+      <div>
+        <button class="container3" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

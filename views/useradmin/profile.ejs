@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/header1') %>
+    <title>Profile</title>
+</head>
+<style>
+    a.edit{
+        text-decoration: none;
+        font-size: x-large;
+        color: black;
+    }
+
+    a.edit:hover {
+        text-decoration: none;
+        font-size: x-large;
+        border: 2px solid black;
+        border-radius: 1cm;
+        background-color: black;
+        color: white;
+        padding: 2px 3px;
+    }
+
+    h3{
+        display: inline;
+    }
+</style>
+<body>
+    <h1>This is <%= userDetail ['name'] %>'s Profile</h1>
+    <br>
+    <h3>Name : </h3><%= userDetail ['name'] %>
+    <br><br>
+    <h3>Email : </h3><%= userDetail ['email'] %>
+    <br><br>
+    <h3>Role : </h3><%= userDetail ['role'] %>
+    <br><br>
+    <h3>IsActive : </h3><%= userDetail ['isActive'] %>
+    <br><br><br>
+    <a class="edit" href="/user/edit">Edit</a>
+</body>
+
+</html>

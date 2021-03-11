@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/header1') %>
+    <title>User Details</title>
+</head>
+<style>
+    h3{
+        display: inline;
+    }
+</style>
+<body>
+    <h1>All Users Details</h1>
+    <ul class="timeline">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <li>
+            <div>
+                <h3>UserId : </h3><%= data[i]._id %>
+                <br>
+                <h3>Name : </h3><%= data[i].name %>
+                <br>
+                <h3>Email : </h3><%= data[i].email %>
+                <br>
+                <h3>Password : </h3><%= data[i].password %>
+                <br>
+                <h3>Role : </h3><%= data[i].role %>
+                <br>
+                <h3>IsActive : </h3><%= data[i].isActive %>
+            </div>
+            <br>
+        </li>
+        <% } %>
+    </ul>
+</body>
+</html>

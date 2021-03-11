@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+    font-size: x-large;
+    border: 2px solid black;
+    border-radius: 1cm;
+    background-color: rgb(21, 241, 32);
+    color: white;
+    padding: 2px 3px;
+}
+
+h3{
+    display: inline;
+}
+
+.link {
+    float: right;
+}
