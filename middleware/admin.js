@@ -14,7 +14,7 @@ const admin = async (req, res, next) => {
         // console.log(result);
         // console.log(req.cookies)
         // req.cookies.id = result._id;
-        if(result.role !== 'Admin') return res.send('Not authorised to access')
+        if(result.role !== 'Admin') return res.redirect('/');
         next();
     } catch{
         res.redirect('/')

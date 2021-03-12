@@ -35,6 +35,7 @@ const bookSchema = new mongoose.Schema({
     ref: 'Author'
   }
 },{collection: 'Books'})
+
 // data with `` alows us to take buffer image 
 // to display image sourse this will return a proper string display image from buffer 
 bookSchema.virtual('coverImagePath').get(function() {
